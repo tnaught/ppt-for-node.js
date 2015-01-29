@@ -1,0 +1,19 @@
+{
+  "name": "node_ppt",
+  "version": "0.0.1",
+  "description": "a sharing about node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "node",
+    "sharing"
+  ],
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "request": "^2.51.0",
+  },
+  "author": "tianqin",
+  "license": "ISC"
+}

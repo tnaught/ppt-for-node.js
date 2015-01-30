@@ -11,26 +11,62 @@
             <h2 class="title">索引</h2>
             <ul>
                 <li>概述</li>
-                <li>示例场景</li>
+                <li>示例</li>
                 <li>扩展</li>
             </ul>
         </div>
         <div class="step" data-x="1000">
-            <h2>Node.js</h2>
-            <p></p>
+            <h2>概述</h2>
+            <h3>node.js是什么</h3>
+            <p>
+                服务端语言，解析javascript，事件驱动，异步请求
+            </p>
+            <h3>node.js能做什么</h3>
+            <p>
+                
+            </p>
         </div>
         <div class="step" data-x="2000">
-            <h2>示例场景</h2>
+            <h2>示例</h2>
             <ul>
-                <li><a href="/demo/createServer">静态服务器</a></li>
+                <li><a href="/demo/createServer">构建服务器</a></li>
                 <li><a href="/demo/crawler">爬虫程序</a></li>
                 <li><a href="/demo/blog">简单的博客</a></li>
             </ul>
         </div>
         <div class="step" data-x="3000">
-            <h2></h2>
+            <h2>构建服务器</h2>
+            <pre>
+                var http = require('http');
+
+                http.createServer(function(req, res) {
+                    res.writeHeader(200, {'Content-type': 'text/plain'});
+                    res.write('Hello World!');
+                    res.end();
+                }).listen(1337, '127.0.0.1');
+            </pre>
         </div>
         <div class="step" data-x="4000">
+            <h2>爬虫程序</h2>
+        </div>
+        <div class="step" data-x="5000">
+            <h2>简单的博客</h2>
+
+        </div>
+        <div class="step" data-x="6000">
+            <h2>扩展</h2>
+            <h3>web缓存</h3>
+            <p>
+                <span class="keyword">Cache-Control</span>
+                <span class="keyword">Last-Modified</span>
+                <span class="keyword">ETag</span>
+            </p>
+            <h3>测试框架:mocha</h3>
+            <p>mocha</p>
+            <h3>bigpipe</h3>
+            <p></p>
+        </div>
+        <div class="step" data-x="7000">
             <h2>结束语</h2>
             <p>参考资料:</p>
             <ul>

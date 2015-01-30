@@ -2,9 +2,9 @@ var http = require('http');
 var url = require('url');
 var path = require('path');
 var fs = require('fs');
-var mime = require('../lib/mime');
-var route = require('../lib/route');
-var config = require('../lib/config');
+var mime = require('./mime');
+var route = require('./route');
+var config = require('./config');
 var queryString = require('querystring');
 
 var server = http.createServer(function(req, res) {

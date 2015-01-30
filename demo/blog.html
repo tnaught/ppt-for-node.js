@@ -25,14 +25,17 @@
     <div class="container">
         <button class="btn btn-success pull-right" action="post-add">写博客<i class="glyphicon glyphicon-pencil"></i></button>
         <div class="post">
-            <h2 class="title">title</h2>
+            <h2 class="title" id="title">title</h2>
             <div class="detail">
-                <span class="date">创建时间:cTime</span>
-                <span class="date">修改时间:uTime</span>
-                <span class="author">作者:author</span>
-                <span class="tag">标签:tag</span>
+                <span class="date">创建时间:</span>
+                <span id="cTime"></span>
+                <span class="date">修改时间:</span>
+                <span id="uTime"></span>
+                <span class="author">作者:</span>
+                <span id="author">author</span>
+                <span id="tag" class="tag"></span>
             </div>
-            <div class="post-content">
+            <div class="post-content" id="content">
                 <p>这是正文</p>
                 <p>
                     You know, being a test pilot isn't always the healthiest business in the world.

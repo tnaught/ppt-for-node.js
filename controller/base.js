@@ -1,4 +1,4 @@
-var config = require('../lib/config');
+var config = require('./config');
 var fs = require('fs');
 var l_path = require('path'); 
 

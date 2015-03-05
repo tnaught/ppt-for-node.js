@@ -8,39 +8,23 @@ exports.createServer = function(path, res) {
 };
 
 exports.crawler = function(path, res) {
-    var url = 'http://play.google.com';
-    var proxy = 'http://q.gfw.li:36105';
+    var url = 'http://shouji.baidu.com/';
     request({
-        url: url,
-        proxy: proxy
+        url: url
     }, function(error, reponse, body) {
         if(!error && reponse.statusCode == 200) {
             var json = [];
             var $body = cheerio.load(body);
-            var appHref = $body('.nav-container .apps a').attr('href');
-            request({
-                url: url + appHref,
-                proxy: proxy
-            }, function(error, response, body) {
-                if(!error && reponse.statusCode == 200) {
-                    var $appbody = cheerio.load(body);
-                    $appbody('.card-list .card').each(function(i, element) {
-                        var title = $appbody(element).find('.title').attr('title');
-                        var href = $appbody(element).find('.title').attr('href');
-                        json.push({
-                            title: title,
-                            href: href
-                        })
-                    });
-                    base.renderJson(res, JSON.stringify(json));
-                }
-                else {
-                    console.log(error);
-                }
+            var app = $body('.rec-main .app-box');
+            app.each(function(i, v) {
+                json.push({href: $body(v).attr('href')})
             })
+            base.renderJson(res, JSON.stringify(json));
         }
         else {
-            console.log(error)
+            base.renderJson(res, JSON.stringify({
+                status: 'error'
+            }));
         }
     });
 };

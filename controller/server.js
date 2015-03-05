@@ -21,7 +21,6 @@ var server = http.createServer(function(req, res) {
         //直接读取静态文件
         var ext = path.extname(pathname);
         realPath = path.normalize(config.basePath + pathname);
-
         fs.exists(realPath, function(exists) {
             if(!exists) {
                 res.statusCode = 404;
@@ -63,6 +62,11 @@ var server = http.createServer(function(req, res) {
         }
     }
 });
+
+server.on('error', function() {
+    console.log('server error');
+})
+
 server.listen(3000, function() {
     console.log('listen to the port 3000');
 });

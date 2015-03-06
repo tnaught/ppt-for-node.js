@@ -5,7 +5,22 @@ body {
 	background-color: #ddd;
 	-webkit-font-smoothing: antialiased;
 }
-
+h1,h2,h3 {
+	font-family: "Microsoft Yahei";
+}
+a {
+	text-decoration: none;
+}
+ol li a {
+	display: inline-block;
+	padding: 9px 15px;
+}
+ol li a:hover {
+	background-color: #ddd;
+}
+.text-center {
+	text-align: center;
+}
 /** STEP STYLES **/
 .step {
 	width: 900px;

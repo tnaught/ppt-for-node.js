@@ -73,4 +73,8 @@ node.js自带的http模块提供了http.request方法，不过比较基础，参
 
 PPT5:
 -------
-博客程序，
+搭建一个简单的博客，除了静态文件外，服务器端需要具备处理GET和POST请求以及从存取数据库的能力。
+
+- GET请求
+![首页获取最新博客的方法](/app/assets/getLatestPost.png)
+- POST请求

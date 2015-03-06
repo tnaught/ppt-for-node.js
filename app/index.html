@@ -8,53 +8,61 @@
 <body>
     <div id="jmpress">
         <div class="step">
-            <h2 class="title">索引</h2>
-            <ul>
-                <li>概述</li>
-                <li>示例</li>
-                <li>扩展</li>
-            </ul>
+            <h1 class="title">索引</h1>
+            <ol>
+                <li><h2>概述</h2></li>
+                <li><h2>示例</h2></li>
+                <li><h2>扩展</h2></li>
+            </ol>
         </div>
         <div class="step" data-x="1000">
-            <h2>概述</h2>
+            <h1 class="text-center">概述</h1>
             <h3>node.js是什么</h3>
             <p>
-                服务端语言，解析javascript，事件驱动，异步请求
+                JS是脚本语言，脚本语言都需要一个解析器才能运行。对于写在HTML页面里的JS，浏览器充当了解析器的角色。而对于需要独立运行的JS，NodeJS就是一个<strong>解析器</strong>。
+                每一种解析器都是一个运行环境，不但允许JS定义各种数据结构，进行各种计算，还允许JS使用运行环境提供的内置对象和方法做一些事情。例如运行在浏览器中的JS的用途是操作DOM，浏览器就提供了document之类的内置对象。而运行在NodeJS中的JS的用途是操作磁盘文件或搭建HTTP服务器，NodeJS就相应提供了<em>fs</em>、<em>http</em>等<strong>内置对象</strong>。
             </p>
             <h3>node.js能做什么</h3>
             <p>
-                
+                实现高性能Web服务器:事件机制和异步IO模型
             </p>
         </div>
-        <div class="step" data-x="2000">
-            <h2>示例</h2>
-            <ul>
+        <div class="step" data-x="2000" data-rotate="90">
+            <h1 class="text-center">示例</h1>
+            <ol>
                 <li><a href="/demo/createServer">构建服务器</a></li>
                 <li><a href="/demo/crawler">爬虫程序</a></li>
                 <li><a href="/demo/blog">简单的博客</a></li>
-            </ul>
+            </ol>
         </div>
         <div class="step" data-x="3000">
-            <h2>构建服务器</h2>
-            <pre>
-                var http = require('http');
-
-                http.createServer(function(req, res) {
-                    res.writeHeader(200, {'Content-type': 'text/plain'});
-                    res.write('Hello World!');
-                    res.end();
-                }).listen(1337, '127.0.0.1');
-            </pre>
+            <h1 class="text-center">构建服务器</h1>
+            <div class="text-center">
+                <img src="assets/createServer.png" alt="">
+            </div>
         </div>
-        <div class="step" data-x="4000">
-            <h2>爬虫程序</h2>
+        <div class="step" data-x="4000" data-scale="1.2">
+            <h1 class="text-center">爬虫程序</h1>
+            <div class="text-center">
+                <img src="assets/crawler.png" style="width:500px;" alt="">
+            </div>
         </div>
         <div class="step" data-x="5000">
-            <h2>简单的博客</h2>
-
+            <h1 class="text-center">简单的博客</h1>
+            <h3>获取最新博客内容:Get请求</h3>
+            <div class="text">
+                <img src="assets/getLatestPost.png" style="width:500px;" alt="">
+            </div>
         </div>
-        <div class="step" data-x="6000">
-            <h2>扩展</h2>
+        <div class="step" data-x="6000" data-rotate-y="45d">
+            <h1 class="text-center">简单的博客</h1>
+            <h3>提交博客:Post请求</h3>
+            <div class="text">
+                <img src="assets/getLatestPost.png" style="width:500px;" alt="">
+            </div>
+        </div>
+        <div class="step" data-x="7000">
+            <h1 class="text-center">扩展</h1>
             <h3>web缓存</h3>
             <p>
                 <span class="keyword">Cache-Control</span>
@@ -66,15 +74,14 @@
             <h3>bigpipe</h3>
             <p></p>
         </div>
-        <div class="step" data-x="7000">
-            <h2>结束语</h2>
+        <div class="step" data-x="8000">
+            <h1 class="text-center">结束语</h1>
             <p>参考资料:</p>
-            <ul>
+            <ol>
                 <li><a href="http://www.nodebeginner.org/index-zh-cn.html#whats-needed-to-route-requests">http://www.nodebeginner.org/index-zh-cn.html#whats-needed-to-route-requests</a></li>
                 <li><a href="https://github.com/alsotang/node-lessons">https://github.com/alsotang/node-lessons</a></li>
                 <li><a href="http://nqdeng.github.io/7-days-nodejs/">http://nqdeng.github.io/7-days-nodejs/</a></li>
-            </ul>
-            <p><img src="" alt="Thanks"></p>
+            </ol>
         </div>
     </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
